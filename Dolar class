@@ -1,0 +1,24 @@
+package principal;
+
+//Classe filha (subclasse) que representa a moeda Dólar e herda de Moeda
+class Dolar extends Moeda {
+	
+    // Construtor que recebe o valor em Dólar e chama o construtor da classe mãe (Moeda)
+    public Dolar(double valor) {
+        super(valor);  // Chama o construtor da classe mãe para inicializar o valor
+    }
+
+    // Sobrescreve (override) o método info() da classe mãe Moeda
+    // Exibe o valor da moeda no formato "Dólar: valor"
+    @Override
+    void info() {
+        System.out.println("Dolar: " + valor);
+    }
+    
+    // Sobrescreve (override) o método converter() da classe mãe Moeda
+    // Converte o valor do Dólar para Real usando uma taxa de câmbio fictícia
+    @Override
+    double converter() {
+        return valor * 5.0; // Taxa de conversão fictícia para Real
+    }
+}
