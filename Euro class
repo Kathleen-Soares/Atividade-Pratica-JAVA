@@ -1,0 +1,22 @@
+package principal;
+
+//Classe filha (subclasse) que representa a moeda Euro, estendendo a classe mãe Moeda
+class Euro extends Moeda {
+    // Construtor que recebe o valor em Euro e chama o construtor da classe mãe (Moeda)
+    public Euro(double valor) {
+        super(valor); // Chama o construtor da classe mãe
+    }
+    
+    // Sobrescreve (override) o método info() da classe mãe 
+    // Exibe o valor da moeda no formato "Euro: valor"
+    @Override
+    void info() {
+        System.out.println("Euro: " + valor);
+    }
+
+    // Sobrescreve (override) o método converter() da classe mãe
+    // Converte o valor do Euro para Real usando uma taxa de câmbio fictícia    @Override
+    double converter() {
+        return valor * 5.4; // Taxa de conversão fictícia para Real
+    }
+}
