@@ -1,0 +1,23 @@
+package principal;
+
+//Classe filha (subclasse) que representa a moeda Real e herda de Moeda
+class Real extends Moeda {
+    // Construtor que recebe o valor em Real e chama o construtor da classe mãe (Moeda)
+    public Real(double valor) {
+        super(valor); // Chama o construtor da classe mãe para inicializar o valor
+    }
+
+    // Sobrescreve (override) o método info() da classe mãe Moeda
+    // Exibe o valor da moeda no formato "Real: valor"
+    @Override
+    void info() {
+        System.out.println("Real: " + valor);
+    }
+    
+ // Sobrescreve (override) o método converter() da classe mãe Moeda
+    // Como o Real já está na moeda base, não há conversão necessária, então retorna o próprio valor
+    @Override
+    double converter() {
+        return valor; // Retorna o próprio valor, pois já está em Real
+    }
+}
