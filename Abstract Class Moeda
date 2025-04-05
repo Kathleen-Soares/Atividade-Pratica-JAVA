@@ -1,0 +1,19 @@
+package principal;
+
+//Classe mãe (superclasse) que define a estrutura para qualquer moeda
+abstract class Moeda {
+    protected double valor; // Valor da moeda
+
+    // Construtor que inicializa o valor da moeda
+    public Moeda(double valor) {
+        this.valor = valor;
+    }
+
+    abstract void info();// Método abstrato para exibir informações sobre a moeda
+    abstract double converter(); // Método abstrato para converter a moeda para Real
+
+    // Método para obter o valor da moeda
+	public double getValor() { 
+		return valor;
+	}
+}
